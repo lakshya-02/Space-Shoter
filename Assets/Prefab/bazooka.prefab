@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c2646f2b5ecf64eaee8b7f2e54e6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMissileSpeed: 2
+  baseMissileSpeed: 5
   impactEffect: {fileID: 100002, guid: cafecd3fc3b761c45bb1553f35cf5c96, type: 3}
 --- !u!61 &3737648443254108196
 BoxCollider2D:

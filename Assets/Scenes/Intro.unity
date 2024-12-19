@@ -227,72 +227,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &496094305
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1364634192099755840, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_Name
-      value: Intromanager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252789430388813162, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: Mute
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575671953222499191, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2252789430388813162, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-    - {fileID: 8617510879266225466, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1364634192099755840, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1598274613}
-  m_SourcePrefab: {fileID: 100100000, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
 --- !u!1 &557968071
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,31 +839,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491691707}
   m_CullTransparentMesh: 1
---- !u!1 &1598274609 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1364634192099755840, guid: 8914805f9e8ab7848b59d648268f06c8, type: 3}
-  m_PrefabInstance: {fileID: 496094305}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1598274613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598274609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb6c44ac3b26c24aa58f378fd10b03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8010730223184361399, guid: e400d5bdf172caa4581c3cc12a87a373, type: 3}
-  asteroidPrefab: {fileID: 5594062416521053784, guid: 9fbec83bda7897841a9f49de9c940e49, type: 3}
-  bazShipPrefab: {fileID: 775476526290336582, guid: 5c39ad390577fe843abefcbd2aebb56b, type: 3}
-  minInstantiateValue: -7
-  maxInstantiateValue: 7
-  enemyDestroyTime: 3
-  asteroidDestroyTime: 4
-  bazShipDestroyTime: 5
 --- !u!1 &1719562128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,4 +1247,3 @@ SceneRoots:
   - {fileID: 628573179}
   - {fileID: 438776086}
   - {fileID: 925490966}
-  - {fileID: 496094305}

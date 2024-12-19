@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AddHeart : MonoBehaviour
 {
-    [SerializeField] public float fallSpeed = 1f;
-    [SerializeField] private float minFallSpeed = 1f;
-    [SerializeField] private float maxFallSpeed = 5f;
+    [SerializeField] public float fallSpeed = 2f;
+    [SerializeField] private float minFallSpeed = 3f;
+    [SerializeField] private float maxFallSpeed = 7f;
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class AddHeart : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Asteroid")||collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("bazooka")||collision.gameObject.CompareTag("Heart")||collision.gameObject.CompareTag("baz"))
+        if (collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Asteroid")||collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("bazooka")||collision.gameObject.CompareTag("Heart")||collision.gameObject.CompareTag("baz")||collision.gameObject.CompareTag("missile"))
         {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
             return;
