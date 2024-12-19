@@ -177,6 +177,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bazookaPrefab: {fileID: 4397093861275420606, guid: 1ccea65e966b2444e83e75e3d864f5f1, type: 3}
   spos: {fileID: 9088280441520355025}
-  minFireInterval: 0.8
-  maxFireInterval: 5
+  minFireInterval: 1
+  maxFireInterval: 3
   baseSpeed: 2.5
