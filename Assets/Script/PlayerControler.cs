@@ -13,13 +13,17 @@ public class PlayerController : MonoBehaviour
     [Header("Missile")]
     public GameObject missile;
     public Transform missileSpawnPosition;
-    public float destroyTime;
+    public float destroyTime = 5f;
     public Transform muzzleSpawnPos;
+    private bool doubleShootActive = false;
 
     private void Start()
     {
         // Prevent player from colliding with missiles
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Missile"));
+        // Prevent missiles from colliding with hearts
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Missile"), LayerMask.NameToLayer("Heart"));
+    
     }
 
     private void Update()
@@ -57,16 +61,25 @@ public class PlayerController : MonoBehaviour
         transform.position = newPosition;
     }
 
-    void PlayerShoot()
+   private void PlayerShoot()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SpawnMissile();
-            SpawnMuzzleEffect();
+            if (doubleShootActive)
+            {
+                SpawnMissile();
+                SpawnMissile();
+                SpawnMuzzleEffect();
+                SpawnMuzzleEffect();
+            }
+            else
+            {
+                SpawnMissile();
+                SpawnMuzzleEffect();
+            }
             GameManager.instance.PlaySound(GameManager.instance.fireSound);
         }
     }
-
     void SpawnMissile()
     {
         GameObject gm = Instantiate(missile, missileSpawnPosition);
@@ -85,10 +98,30 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 0;
-            SceneManager.LoadScene(3, LoadSceneMode.Additive);
+            if (Time.timeScale == 1)
+            {
+                PauseGame();
+            }
+            else
+            {
+                ResumeGame();
+            }
         }
     }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene(3, LoadSceneMode.Additive);
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.UnloadSceneAsync(3);
+    }
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -101,7 +134,20 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Heart"))
         {
             GameManager.instance.RestoreHealth();
+            transform.rotation = Quaternion.identity; 
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("light"))
+        {
+            StartCoroutine(DoubleShootPowerUp());
+            transform.rotation = Quaternion.identity; // Reset player rotation after collision
+            Destroy(collision.gameObject);
+        }
+    }
+     private IEnumerator DoubleShootPowerUp()
+    {
+        doubleShootActive = true;
+        yield return new WaitForSeconds(5f);
+        doubleShootActive = false;
     }
 }

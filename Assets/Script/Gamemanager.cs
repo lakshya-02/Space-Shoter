@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject asteroidPrefab;
     public GameObject bazShipPrefab;
+    public GameObject lightningPrefab;
     public GameObject heartPrefab; // Added reference to heart prefab
 
     [Header("Spawn Settings")]
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
     public AudioClip heartLostSound;
     public AudioClip explosionSound;
     public AudioClip playerDeathSound;
+    public AudioClip lightningSound;
     public AudioClip heartCollectSound; // Added heart collect sound
     private AudioSource audioSource;
 

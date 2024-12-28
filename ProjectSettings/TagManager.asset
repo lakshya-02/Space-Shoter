@@ -12,6 +12,7 @@ TagManager:
   - bazooka
   - baz
   - Heart
+  - light
   layers:
   - Default
   - TransparentFX
