@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &979596811720204867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3769242215962003883}
+  - component: {fileID: 8563273873607641748}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3769242215962003883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979596811720204867}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 791.17426, y: 664.8361, z: -3.0220118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8563273873607641748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979596811720204867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a24b8c77fd940d141b719d61b6cba0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePrefabs:
+  - {fileID: 1748120601702024238, guid: 24377b446e30d454e9127bc56f67046f, type: 3}
+  - {fileID: 6171617033459544599, guid: 2121c19161948f64481656d49793dfad, type: 3}
+  - {fileID: 7449260590322052676, guid: b086ffbb02f218c459fb3c8d46991e02, type: 3}
+  - {fileID: 249018488681169416, guid: c11d99638c12054418ee094ac914f9c5, type: 3}
+  - {fileID: 5837912488741504245, guid: 009bee3e7680ead4782e6517fd7a4de4, type: 3}
+  - {fileID: 5969071131734628522, guid: a6f2852e7eecfd847937395d54adb893, type: 3}
+  - {fileID: 886101915538727684, guid: 575b01a900680ed48b7869b0ad636f6d, type: 3}
+  - {fileID: 8673724781035928015, guid: 154b8001ecd4e6c428d3cc5e9c6b8674, type: 3}
+  canvasTransform: {fileID: 0}
+  spawnInterval: 1.5
+  moveSpeed: 350
+  centerAvoidanceWidth: 200

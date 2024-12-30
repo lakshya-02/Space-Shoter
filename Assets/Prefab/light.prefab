@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ffa18adbe1dd643b57ee4a0bc434b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 0.37
-  minFallSpeed: 0.31
-  maxFallSpeed: 0.62
+  fallSpeed: 1
+  minFallSpeed: 1
+  maxFallSpeed: 5

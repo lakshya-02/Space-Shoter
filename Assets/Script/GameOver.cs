@@ -24,20 +24,19 @@ public class GameOver : MonoBehaviour
         {
             highScore = currentScore;
             PlayerPrefs.SetInt("HighScore", highScore);
-            PlayerPrefs.Save();
         }
 
-        // Update UI texts
+        // Display scores
         currentScoreText.text = "Score: " + currentScore;
         highScoreText.text = "High Score: " + highScore;
+
+        PlayerPrefs.Save();
     }
 
-    public void PlayGame()
+    public void RestartGame()
     {
-        // Reset current score before starting new game
-        PlayerPrefs.SetInt("CurrentScore", 0);
-        PlayerPrefs.Save();
-        SceneManager.LoadSceneAsync(1); // Load main game scene
+        // Assuming your main game scene is at index 1
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void QuitGame()
@@ -47,5 +46,12 @@ public class GameOver : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.SetInt("HighScore", 0);
+        PlayerPrefs.Save();
+        UpdateScores(); // Update the displayed scores after resetting
     }
 }

@@ -140,6 +140,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("light"))
         {
             StartCoroutine(DoubleShootPowerUp());
+            GameManager.instance.PlaySound(GameManager.instance.lightningCollectSound);
             transform.rotation = Quaternion.identity; // Reset player rotation after collision
             Destroy(collision.gameObject);
         }

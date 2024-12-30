@@ -44,7 +44,6 @@ public class Colorsforkeys : MonoBehaviour
 
         subtitleColors = new List<Color>
         {
-            new Color(1f, 0.8f, 0.8f), // Light Red
             new Color(0.8f, 0.4f, 0.4f), // Dark Red
             new Color(1f, 1f, 0.8f), // Light Yellow
             new Color(0.8f, 0.8f, 0.4f), // Dark Yellow
@@ -58,15 +57,29 @@ public class Colorsforkeys : MonoBehaviour
             new Color(0.8f, 0.4f, 0.8f), // Dark Magenta
             new Color(1f, 1f, 1f), // White
             new Color(0.5f, 0.5f, 0.5f), // Grey
-            new Color(0.2f, 0.2f, 0.2f) // Dark Grey
+            new Color(0.2f, 0.2f, 0.2f), // Dark Grey
+            new Color(1f, 0.8f, 0.8f) // Light Red
         };
+
+        // Randomize the subtitle colors
+        ShuffleColors(subtitleColors);
 
         // Start the color change coroutines
         StartCoroutine(ChangeTitleColors());
         StartCoroutine(ChangeSubtitleColors());
 
-        // Start the coroutine to load scene 2 after 5 seconds
-        StartCoroutine(LoadSceneAfterDelay(5f));
+        // Start the coroutine to load the scene after 3 seconds
+        StartCoroutine(LoadSceneAfterDelay(3f));
+    }
+
+    private void Update()
+    {
+        // Check for space key press to load the scene immediately
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StopAllCoroutines(); // Stop any ongoing coroutines
+            SceneManager.LoadScene(1);
+        }
     }
 
     private IEnumerator ChangeTitleColors()
@@ -106,5 +119,16 @@ public class Colorsforkeys : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(1);
+    }
+
+    private void ShuffleColors(List<Color> colors)
+    {
+        for (int i = 0; i < colors.Count; i++)
+        {
+            Color temp = colors[i];
+            int randomIndex = Random.Range(i, colors.Count);
+            colors[i] = colors[randomIndex];
+            colors[randomIndex] = temp;
+        }
     }
 }

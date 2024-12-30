@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7575671953222499191}
+  - component: {fileID: 3808962427083543801}
   - component: {fileID: 8617510879266225466}
   - component: {fileID: 2252789430388813162}
   m_Layer: 0
@@ -26,13 +27,54 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364634192099755840}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3808962427083543801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364634192099755840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b96a250ec65c24c9f6954c4c2f7ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeartSprite: {fileID: 21300000, guid: c95931dcac61fd0468bac2c0c445e1fc, type: 3}
+  emptyHeartSprite: {fileID: 21300000, guid: 7db7bc12745fdee46b893530ad89d0b5, type: 3}
+  enemyPrefab: {fileID: 5594062416521053784, guid: 9fbec83bda7897841a9f49de9c940e49, type: 3}
+  asteroidPrefab: {fileID: 8010730223184361399, guid: e400d5bdf172caa4581c3cc12a87a373, type: 3}
+  bazShipPrefab: {fileID: 775476526290336582, guid: 5c39ad390577fe843abefcbd2aebb56b, type: 3}
+  lightningPrefab: {fileID: 6356737492307389570, guid: a4c7e77fc92120946a7eb32972ed2fc0, type: 3}
+  heartPrefab: {fileID: 1700296096058658399, guid: 6ac3b089551eb9947b841363c54e65f1, type: 3}
+  muzzlee: {fileID: 100002, guid: 565cdc2ed7b030a41accd8f00ae59a50, type: 3}
+  minInstantiateValue: -7
+  maxInstantiateValue: 7
+  enemyDestroyTime: 3
+  asteroidDestroyTime: 5
+  bazShipDestroyTime: 5
+  heartSpawnIntervalMin: 7.5
+  heartSpawnIntervalMax: 20
+  lightningSpawnIntervalMin: 15
+  lightningSpawnIntervalMax: 25
+  scoreText: {fileID: 0}
+  explosion: {fileID: 100002, guid: cafecd3fc3b761c45bb1553f35cf5c96, type: 3}
+  fireSound: {fileID: 8300000, guid: cde81a90f0aa72840849bb7c45efb5de, type: 3}
+  heartLostSound: {fileID: 8300000, guid: 0c0c654b56384fb4c9addfde89a6891e, type: 3}
+  explosionSound: {fileID: 8300000, guid: 39973912f1e797e4a982ad0870e1eef6, type: 3}
+  playerDeathSound: {fileID: 8300000, guid: 5bfbc69127b07704f9bd4b49a8c57b70, type: 3}
+  heartCollectSound: {fileID: 8300000, guid: 22fbc1f7a4494fe45a8f6194648bba1b, type: 3}
+  lightningCollectSound: {fileID: 8300000, guid: 9d0afc298f0a1aa4dbda01bb17dbe508, type: 3}
 --- !u!81 &8617510879266225466
 AudioListener:
   m_ObjectHideFlags: 0
