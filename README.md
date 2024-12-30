@@ -27,8 +27,8 @@ Displays both your current score and high score, motivating you to try again.
 
 Why Play Space Shooter?
 
-Beginner-Friendly: Easy-to-learn controls and customizable keybindings.
-Replayability: Endless opportunities to improve your score with varied enemies and strategic power-ups.
+Beginner-Friendly: Easy-to-learn controls and customizable keybindings.         
+Replayability: Endless opportunities to improve your score with varied enemies and strategic power-ups.        
 Passionate Development: A showcase of my first complete Unity project, created with dedication and passion for game development.
 
 Future Updates
