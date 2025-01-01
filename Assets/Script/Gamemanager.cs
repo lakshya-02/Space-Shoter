@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     [Header("Spawn Settings")]
     public float minInstantiateValue = -7f;
     public float maxInstantiateValue = 7f;
-    [SerializeField] private float enemyDestroyTime = 3f;
-    [SerializeField] private float asteroidDestroyTime = 4f;
+    [SerializeField] private float enemyDestroyTime = 10f;
+    [SerializeField] private float asteroidDestroyTime = 20f;
     [SerializeField] private float bazShipDestroyTime = 5f;
     [SerializeField] private float heartSpawnIntervalMin = 10f;
     [SerializeField] private float heartSpawnIntervalMax = 20f;
@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
     {
         Vector3 pos = new Vector3(Random.Range(minInstantiateValue, maxInstantiateValue), 6f);
         var obj = Instantiate(heartPrefab, pos, Quaternion.identity);
-        Destroy(obj, asteroidDestroyTime);
+        Destroy(obj, asteroidDestroyTime + 30f);
         Invoke("SpawnHeart", Random.Range(heartSpawnIntervalMin, heartSpawnIntervalMax));
     }
 
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
     {
         Vector3 pos = new Vector3(Random.Range(minInstantiateValue, maxInstantiateValue), 6f);
         var obj = Instantiate(lightningPrefab, pos, Quaternion.identity);
-        Destroy(obj, asteroidDestroyTime);
+        Destroy(obj, asteroidDestroyTime + 30f);
         Invoke("SpawnLightning", Random.Range(lightningSpawnIntervalMin, lightningSpawnIntervalMax));
     }
 
